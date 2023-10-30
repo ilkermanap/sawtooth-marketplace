@@ -37,7 +37,7 @@ class Database(object):
         """
         LOGGER.debug('Connecting to database: %s:%s', self._host, self._port)
         
-        self._conn = r.connect(host=self._host, port=self._port)
+        self._conn = r.connect(host="rethink", port=self._port)
 
     def disconnect(self):
         """Closes the connection to the database

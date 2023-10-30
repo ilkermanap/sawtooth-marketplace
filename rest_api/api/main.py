@@ -20,10 +20,9 @@ import os
 from signal import signal, SIGINT
 import sys
 
-import rethinkdb as rdb
+from rethinkdb import RethinkDB
 
-r = rdb.RethinkDB()
-
+r = RethinkDB()
 
 from sanic import Sanic
 
@@ -171,7 +170,8 @@ def load_config(app):  # pylint: disable=too-many-branches
 
 
 def main():
-    app = Sanic(__name__)
+    app = Sanic()
+    # app = Sanic(__name__)
     app.blueprint(ACCOUNTS_BP)
     app.blueprint(ASSETS_BP)
     app.blueprint(AUTH_BP)
@@ -193,3 +193,5 @@ def main():
     except KeyboardInterrupt:
         close_connections(app)
         loop.stop()
+    except TypeError:
+        print("Type error")

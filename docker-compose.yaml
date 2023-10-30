@@ -156,7 +156,7 @@ services:
     volumes:
       - '.:/project/sawtooth-marketplace'
     working_dir: /project/sawtooth-marketplace
-    container_name: sawtooth-shell
+    # container_name: sawtooth-shell
     depends_on:
       - sawtooth-rest-api
     entrypoint: |

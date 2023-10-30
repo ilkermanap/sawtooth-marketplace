@@ -41,11 +41,14 @@ RUN pip3 install \
     ujson==3.1.0 \
     uvloop==0.14 \
     pylint==1.8.1 \
+    grpcio==1.7.0 \
+    lazy-object-proxy==1.3.1 \
     pycodestyle==2.3.1 \
     grpcio-tools==1.7.0 \
     nose2==0.7.2 \
     pycrypto \
     rethinkdb \
+    httptools==0.0.9 \
     sanic==0.8.3 \
     itsdangerous==1.1.0
 
